@@ -5,7 +5,7 @@ import { Http } from '@angular/http';
 export class StocksService {
     private stocks: Array<string> = ['MSFT', 'GOOG', 'FB', 'TWTR'];
     private http: Http;
-    private stocksUrl = "http://finance.google.com/finance/info?client=ig&q=NASDAQ%";
+    private stocksUrl = "http://finance.google.com/finance/info?client=ig&q=NASDAQ%3A";
 
     constructor(http: Http) {
         this.http = http;
