@@ -2,11 +2,7 @@
   <div class="mdl-cell mdl-cell--4-col"></div>
   <div class="mdl-cell mdl-cell--4-col">
     <form [formGroup]="stocksForm" (submit)="add(newStock.value)">
-      <div class="mdl-textfield mdl-js-textfield">
-        <input type="text" #newStock [formControl]="stocksForm.controls['newStock']" class="mdl-textfield__input" placeholder="Add Stock..."
-        />
-        <label class="mdl-textfield__label" for="newStock">Text...</label>
-      </div>
+        <input type="text" #newStock [formControl]="stocksForm.controls['newStock']" class="mdl-textfield__input" placeholder="Add Stock..."/>
     </form>
     <table class="mdl-data-table mdl-data-table--selectable mdl-shadow--2dp">
       <tbody>

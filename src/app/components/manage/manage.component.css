@@ -14,3 +14,10 @@ table {
   color: #555;
 }
 
+form {
+  margin-bottom: 1rem;
+}
+
+input[type=text] {
+  outline: none;
+}
