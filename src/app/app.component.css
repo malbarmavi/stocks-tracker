@@ -1,0 +1,6 @@
+.mdl-navigation__link:hover {
+  opacity: 1;
+  text-shadow: 1px 1px 5px rgba(0, 8, 54, 0.59);
+  background: #283593;
+  transition: all 0.2s ease-in-out;
+}
