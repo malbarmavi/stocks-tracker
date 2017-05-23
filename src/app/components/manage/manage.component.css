@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+}
+
+.mdl-textfield {
+  width: 100%;
+}
+
+.mdl-button {
+  color: #c8c8c8;
+}
+
+.mdl-button:hover {
+  color: #555;
+}
+
