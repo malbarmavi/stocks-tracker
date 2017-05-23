@@ -4,8 +4,8 @@
       <span class="mdl-layout-title mdl-layout--large-screen-only">Stocks Tracker</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation ">
-        <a class="mdl-navigation__link ">Dashboard</a>
-        <a class="mdl-navigation__link">Manage</a>
+        <a class="mdl-navigation__link" [routerLink]="['/Dashboard']" >Dashboard</a>
+        <a class="mdl-navigation__link" [routerLink]="['/Manage']">Manage</a>
         <a class="mdl-navigation__link">Contact</a>
         <a class="mdl-navigation__link">About</a>
       </nav>
@@ -16,7 +16,7 @@
       <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--1-col"></div>
         <div class="mdl-cell mdl-cell--10-col">
-          <app-dashboard></app-dashboard>
+           <router-outlet></router-outlet>
         </div>
         <div class="mdl-cell mdl-cell--1-col"></div>
       </div>
