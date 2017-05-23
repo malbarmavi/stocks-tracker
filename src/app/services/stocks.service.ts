@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 
 @Injectable()
 export class StocksService {
-    private stocks: Array<string> = ['MSFT', 'GOOG', 'FB', 'TWTR','AMZN','INTC'];
+    private stocks: Array<string> = ['MSFT', 'GOOG', 'FB', 'TWTR', 'AMZN', 'INTC'];
     private http: Http;
     private stocksUrl = "http://finance.google.com/finance/info?client=ig&q=";
 
@@ -17,6 +17,11 @@ export class StocksService {
 
     public add(stock) {
         this.stocks.push(stock);
+        return this.get();
+    }
+
+    public remove(stock){
+        this.stocks.splice(this.stocks.indexOf(stock), 1);
         return this.get();
     }
 
