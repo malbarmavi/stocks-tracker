@@ -9,7 +9,7 @@
         <tr *ngFor="let stock of stocksKeys">
           <td class="mdl-data-table__cell--non-numeric">{{stock}}</td>
           <td>
-            <button class="mdl-button" (click)="remove(symbol)"><i class="material-icons">delete</i></button>
+            <a class="remove-button" (click)="remove(symbol)"><i class="material-icons">delete</i></a>
           </td>
         </tr>
       </tbody>
