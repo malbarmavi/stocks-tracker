@@ -3,9 +3,9 @@ import { Http } from '@angular/http';
 
 @Injectable()
 export class StocksService {
-    private stocks: Array<string> = ['MSFT', 'GOOG', 'FB', 'TWTR'];
+    private stocks: Array<string> = ['MSFT', 'GOOG', 'FB', 'TWTR','AMZN','INTC'];
     private http: Http;
-    private stocksUrl = "http://finance.google.com/finance/info?client=ig&q=NASDAQ%3A";
+    private stocksUrl = "http://finance.google.com/finance/info?client=ig&q=";
 
     constructor(http: Http) {
         this.http = http;
