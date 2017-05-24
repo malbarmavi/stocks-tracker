@@ -1,0 +1,44 @@
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--2-col"></div>
+  <div class="mdl-cell mdl-cell--8-col">
+    <form [formGroup]="contactForm">
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" placeholder="First Name..." #firstName [formControl]="contactForm.controls['firstName']"
+              [ngClass]="{'has-error':!contactForm.controls['firstName'].valid && contactForm.controls['firstName'].touched}">
+          </div>
+        </div>
+        <div class="mdl-cell mdl-cell--6-col">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" placeholder="Last Name..." #lastName [formControl]="contactForm.controls['lastName']"
+              [ngClass]="{'has-error':!contactForm.controls['lastName'].valid && contactForm.controls['lastName'].touched}">
+          </div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="email" placeholder="Email..." #email [formControl]="contactForm.controls['email']"
+              [ngClass]="{'has-error':!contactForm.controls['email'].valid  && contactForm.controls['email'].touched}">
+          </div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" placeholder="Job Title..." #jobTitle [formControl]="contactForm.controls['jobTitle']">
+          </div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col">
+          <div class="mdl-textfield mdl-js-textfield">
+            <textarea class="mdl-textfield__input" type="text" rows="3" placeholder="Message..." #message [formControl]="contactForm.controls['message']"
+              [ngClass]="{'has-error':!contactForm.controls['message'].valid  && contactForm.controls['message'].touched}"></textarea>
+          </div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col">
+          <button [disabled]="!contactForm.valid" (click)="clear()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+          Send
+        </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col"></div>
+</div>
