@@ -4,3 +4,8 @@
   background: #283593;
   transition: all 0.2s ease-in-out;
 }
+
+.title{
+  text-decoration: none;
+  color: #fff; 
+}

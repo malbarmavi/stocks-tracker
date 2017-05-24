@@ -10,12 +10,14 @@ import { StockComponent } from './components/stock/stock.component';
 import { StocksService } from './services/stocks.service';
 import { ManageComponent } from './components/manage/manage.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Dashboard', pathMatch: 'full' },
   { path: 'Dashboard', component: DashboardComponent },
   { path: 'Manage', component: ManageComponent },
-  { path: 'Contact', component: ContactComponent }
+  { path: 'Contact', component: ContactComponent },
+  { path: 'About', component: AboutComponent }
 ];
 
 @NgModule({
@@ -24,7 +26,8 @@ const routes: Routes = [
     DashboardComponent,
     StockComponent,
     ManageComponent,
-    ContactComponent
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
