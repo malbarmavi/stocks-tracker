@@ -8,12 +8,12 @@ import { StocksService } from '../../services/stocks.service';
 })
 export class DashboardComponent implements OnInit {
   public stocks:any;
-  constructor(stocksService: StocksService) { 
-   stocksService
-    .load()
-    .subscribe(res => this.stocks = JSON.parse(res.text().replace("//","")));
+  constructor(private stocksService: StocksService) { 
   }
 
   ngOnInit() {
+    this.stocksService
+    .load()
+    .subscribe(res => this.stocks = JSON.parse(res.text().replace("//","")));
   }
 }
